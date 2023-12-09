@@ -1,0 +1,34 @@
+<header class="py-3 mb-3 border-bottom">
+    <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
+      <div class="dropdown">
+        <a href="{% url 'home' %}" class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          DP BLOG
+        </a>
+        <ul class="dropdown-menu text-small shadow">
+          <li><a class="dropdown-item active" href="{% url 'home' %}" aria-current="page"><i class="bi bi-house"></i></a></li>
+          
+        </ul>
+      </div>
+
+      <div class="d-flex align-items-center">
+        <form class="w-100 me-3" role="search">
+          <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+        </form>
+
+        
+        <div class="text-end">
+        {% if user.is_authenticated %}
+          
+          {% if user,is_superuser %}
+              <a href="{% url 'admin:index' %}" class="btn btn-outline-light me-2">Dashboard</a>
+          {% endif %}
+            <a href="{% url 'logout' %}" class="btn btn-warning">logout</a>
+        {% else %}
+           <a href="{% url 'login' %}" class="btn btn-outline-light me-2">Login</a>
+           <a href="{% url 'register' %} " class="btn btn-warning">Sign-up</a>
+          {% endif %}
+        </div>
+          
+      </div>
+    </div>
+  </header>

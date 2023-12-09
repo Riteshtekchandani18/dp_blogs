@@ -1,0 +1,45 @@
+{% extends 'layout/base.html' %}
+
+{% block css %}
+<style>
+    body{
+        background-color: #dbf79f;
+    }
+</style>
+{% endblock css %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+       <div class="col-lg-4 mx-auto">
+        <form action="" method="post">
+            <h2>register</h2>
+            <div class="mb-3">
+              <label for="username" class="form-label">username</label>
+              <input type="text"
+                class="form-control" name="username" id="username" aria-describedby="helpId" placeholder="username">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="text"
+                class="form-control" name="email" id="email" aria-describedby="emailhelpId" placeholder="abc@mail.com">
+
+            </div>
+            <div class="mb-3">
+              <label for="pass" class="form-label">Password</label>
+              <input type="text"
+                class="form-control" name="pass" id="pass" aria-describedby="helpId" placeholder="password">
+            </div>
+            <div class="mb-3">
+              <label for="cpass" class="form-label">Password</label>
+              <input type="text"
+                class="form-control" name="cpass" id="cpass" aria-describedby="helpId" placeholder="cpass">
+            </div>
+            <button type="submit" class="btn btn--success">register</button>
+        </form>
+       </div>
+    </div>
+</div>
+{% endblock content %}
+    
+    

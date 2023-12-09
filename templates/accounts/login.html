@@ -1,0 +1,35 @@
+{% extends 'layout/base.html'%}
+
+
+{% block CSS %}
+<style>
+    body{
+        background-color: #f7bc9f;
+    }
+</style>
+    
+{% endblock CSS %}
+
+
+
+{% block content %}
+    <div class="container">
+         <form action="" method="post">
+            <div class="mb-3">
+              <label for="Email" class="form-label">Email</label>
+              <input type="text"
+                class="form-control" name="email" id="email" aria-describedby="helpId" placeholder="your Email">
+              <small id="helpId" class="form-text text-muted">enter your registered email </small>
+            </div>
+            <div class="mb-3">
+              <label for="pass" class="form-label">Password</label>
+              <input type="text"
+                class="form-control" name="pass" id="pass" aria-describedby="helpId" placeholder="pass">
+              <small id="helpId" class="form-text text-muted"> enter your password</small>
+            </div>
+            <button type="submit" class="btn btn-primary">login</button>
+         </form>
+    </div>
+{% endblock content %}
+    
+    
