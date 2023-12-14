@@ -15,6 +15,5 @@ class articles(models.Model):
         create_at = models.DateTimeField( auto_now=True)
         author = models.ForeignKey("auth.User" , on_delete=models.CASCADE)
         likes = models.PositiveIntegerField("Total likes", default=0)
-
         def __str__(self) :
                 return self.title

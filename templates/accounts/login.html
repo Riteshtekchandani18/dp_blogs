@@ -14,7 +14,8 @@
 
 {% block content %}
     <div class="container">
-         <form action="" method="post">
+         <form  method="post">
+          {% csrf_token %}
             <div class="mb-3">
               <label for="Email" class="form-label">Email</label>
               <input type="text"
